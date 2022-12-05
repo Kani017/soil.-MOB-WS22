@@ -36,6 +36,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       //backgroundColor: Colors.green[100],
 
       body: Container(
@@ -63,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
 
               SizedBox(height: 15),
               Text(
-                'Your plantcare qwdwq solution',
+                'Your plantcare NILS TEST solution',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
