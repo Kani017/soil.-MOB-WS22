@@ -15,18 +15,48 @@ class _HomePageState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('signed in as: ' + user.email!),
-            MaterialButton(onPressed: (){
-              FirebaseAuth.instance.signOut();
-            },
-                color: Colors.teal[200],
-                child: Text('sign out')
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/bg2.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+         child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            Text(
+                'See you soon!',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
+                    color: Color(0xFF1F312B)
+                ),
+              ),
+            SizedBox(height: 250),
+            ElevatedButton(
+                onPressed: (
+                    ) {
+                  FirebaseAuth.instance.signOut();
+                },
+                child: Text('Sign out'),
+                style: ElevatedButton.styleFrom(shape: StadiumBorder(), primary: Colors.green, textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontStyle: FontStyle.normal),
+                ),
+              ),
+            Text('signed in as: ' + user.email!,
+              style: TextStyle(
+                  fontSize: 17,
+                  color: Color(0xFFFFFFFF)
+              ),
             )
-          ],
+           ],
+          ),
+         ),
         ),
       ),
     );
