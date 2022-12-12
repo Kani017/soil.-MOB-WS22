@@ -39,9 +39,9 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Timer'),
-          BottomNavigationBarItem(icon: Icon(Icons.cloud_outlined), label: 'Wetter'),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.cloud_outlined), label: 'Weather'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
 
