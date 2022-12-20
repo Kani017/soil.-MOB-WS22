@@ -48,7 +48,6 @@ class WeatherInfo {
   }
 }
 
-
 class currentWeather extends StatefulWidget {
 
   @override

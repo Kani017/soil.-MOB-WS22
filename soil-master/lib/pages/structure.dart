@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../nav_pages/currentWeather.dart';
+import '../nav_pages/profile_page.dart';
 import '../nav_pages/home.dart';
-import '../nav_pages/plant_timer.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class Structure extends StatefulWidget {
+  const Structure({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Structure> createState() => _StructureState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _StructureState extends State<Structure> {
 
   int _selectedIndex = 0;
 
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     Plant(),
     currentWeather(),
-    UserHome(),
+    ProfilePage(),
   ];
 
   final user = FirebaseAuth.instance.currentUser!;
