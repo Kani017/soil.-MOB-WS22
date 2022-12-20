@@ -31,7 +31,9 @@ class Plant extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF1F312B),
-        title: TextField( controller: controller,),
+        title: TextField(
+          style: TextStyle(color: Colors.white),
+          controller: controller,),
         actions: [
           IconButton(
               onPressed: (){
@@ -65,9 +67,9 @@ class Plant extends StatelessWidget {
   }
   Widget buildUser(User user) => ListTile(
     leading: CircleAvatar(
-      backgroundColor: Color(0xFFAFCEBF),
+      backgroundColor: Color(0xFF2D6550),
       radius: 20.0,
-      child: Icon(Icons.local_florist), ),
+      child: Icon(Icons.local_florist, color: Color(0xFFE0ECE0),), ),
     title: Text(user.name),
     subtitle: Text('is thirsty!'),
   );

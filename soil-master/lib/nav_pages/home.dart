@@ -42,8 +42,7 @@ class _HomePageState extends State<UserHome> {
                   FirebaseAuth.instance.signOut();
                 },
                 child: Text('Sign out'),
-                style: ElevatedButton.styleFrom(shape: StadiumBorder(), primary: Color(
-                    0xFF2D6550), textStyle: const TextStyle(
+                style: ElevatedButton.styleFrom(shape: StadiumBorder(), primary: Color(0xFF2D6550), textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 24,
                     fontStyle: FontStyle.normal),
