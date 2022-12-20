@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor:  Color(0xFF497263),
+        selectedItemColor: Color(0xFF497263),
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         items: const [
@@ -45,21 +45,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
-
-      /* body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('signed in as: ' + user.email!),
-              MaterialButton(onPressed: (){
-                FirebaseAuth.instance.signOut();
-              },
-                color: Colors.teal[200],
-                child: Text('sign out')
-              )
-            ],
-          ),
-      ),*/
     );
   }
 }

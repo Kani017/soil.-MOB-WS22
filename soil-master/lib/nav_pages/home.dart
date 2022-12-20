@@ -35,7 +35,7 @@ class _HomePageState extends State<UserHome> {
                     color: Color(0xFF1F312B)
                 ),
               ),
-            SizedBox(height: 250),
+            SizedBox(height: 270),
             ElevatedButton(
                 onPressed: (
                     ) {
