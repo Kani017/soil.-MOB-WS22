@@ -85,19 +85,5 @@ class User {
     name: json['name'],
   );
 }
-/* class UserTimer extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return   Center(
-      child: ElevatedButton(
-       onPressed: () {
-         flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
-             AndroidFlutterLocalNotificationsPlugin>()?.requestPermission();
-         showNotification();
-       }, child: const Text('Show Notification'),
-      ),
-    );
-  }
- }
- */
+
 

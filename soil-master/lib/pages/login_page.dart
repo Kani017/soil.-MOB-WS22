@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                         controller: _emailController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Email',
+                            hintText: 'E-Mail',
                           )
                       ),
                     ),

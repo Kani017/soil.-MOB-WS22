@@ -64,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(height: 50),
                 //Hello again!
                 Text(
-                  'Hello there',
+                  'Hello there!',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 52,
@@ -73,7 +73,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'ready for a journey?',
+                  'Ready for a journey?',
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xFFfffdf0),
@@ -96,7 +96,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           controller: _emailController,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Email',
+                            hintText: 'E-Mail',
                           )
                       ),
                     ),
