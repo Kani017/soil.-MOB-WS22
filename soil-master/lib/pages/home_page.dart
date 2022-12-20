@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor:  Color(0xFF497263),
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
         items: const [
