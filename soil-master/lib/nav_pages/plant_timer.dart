@@ -30,7 +30,7 @@ class Plant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color(0xFF1F312B),
         title: TextField( controller: controller,),
         actions: [
           IconButton(
@@ -42,26 +42,34 @@ class Plant extends StatelessWidget {
               icon: Icon(Icons.add))
         ],
       ),
-      body: StreamBuilder(
-          stream: readUsers(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError){
-              return Text('Something went wrong! ${snapshot.error}');
-            } else if (snapshot.hasData){
-              final users = snapshot.data!;
-              return ListView(
-                children: users.map(buildUser).toList(),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator());
-            }
-          }),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Color(0xFFE7E4DC),
+        ),
+        child: StreamBuilder(
+            stream: readUsers(),
+            builder: (context, snapshot) {
+              if (snapshot.hasError){
+                return Text('Something went wrong! ${snapshot.error}');
+              } else if (snapshot.hasData){
+                final users = snapshot.data!;
+                return ListView(
+                  children: users.map(buildUser).toList(),
+                );
+              } else {
+                return Center(child: CircularProgressIndicator());
+              }
+            }),
+      ),
     );
   }
   Widget buildUser(User user) => ListTile(
-    leading: CircleAvatar(child: Text('P'),),
+    leading: CircleAvatar(
+      backgroundColor: Color(0xFFAFCEBF),
+      radius: 20.0,
+      child: Icon(Icons.local_florist), ),
     title: Text(user.name),
-    subtitle: Text('soil plants'),
+    subtitle: Text('is thirsty!'),
   );
 }
 

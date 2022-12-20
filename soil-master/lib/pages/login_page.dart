@@ -37,7 +37,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      //backgroundColor: Colors.green[100],
 
       body: Container(
           decoration: BoxDecoration(
