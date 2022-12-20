@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Plant extends StatelessWidget {
-  var controller = TextEditingController();
+  var _controller = TextEditingController();
 
   Stream<List<User>> readUsers() => FirebaseFirestore.instance
       .collection('notes')
@@ -26,6 +26,11 @@ class Plant extends StatelessWidget {
     await docUser.set(json);
   }
 
+  bool? validateInput(){
+    final text = _controller.value.text;
+    return text.isNotEmpty;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +38,15 @@ class Plant extends StatelessWidget {
         backgroundColor: Color(0xFF1F312B),
         title: TextField(
           style: TextStyle(color: Colors.white),
-          controller: controller,),
+          controller: _controller,),
         actions: [
           IconButton(
               onPressed: (){
-                final name = controller.text;
-
+                if (validateInput() == true) {
+                final name = _controller.text;
+                _controller.clear();
                 createUser(name: name);
-              },
+              }},
               icon: Icon(Icons.add))
         ],
       ),
