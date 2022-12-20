@@ -44,7 +44,7 @@ class Plant extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFFE7E4DC),
+          color: Color(0xFFF1EFF0),
         ),
         child: StreamBuilder(
             stream: readUsers(),
