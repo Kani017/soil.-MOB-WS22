@@ -9,4 +9,4 @@ Für unser Projekt haben wir folgende Packages benutzt:
 http: ^0.13.5
 cupertino_icons: ^1.0.2
 firebase_auth: ^3.11.2
-cloud_firestore: ^3.1.5 
+cloud_firestore: ^3.1.5
